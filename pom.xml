@@ -4,7 +4,7 @@
   <artifactId>CoreProtect</artifactId>
   <version>24.0</version>
   <properties>
-    <project.branch></project.branch>
+    <project.branch>development</project.branch>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <skipTests>true</skipTests>
     <maven.compiler.release>11</maven.compiler.release>
@@ -343,6 +343,12 @@
     <dependency>
       <groupId>net.bytebuddy</groupId>
       <artifactId>byte-buddy</artifactId>
+      <version>1.18.8</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.bytebuddy</groupId>
+      <artifactId>byte-buddy-agent</artifactId>
       <version>1.18.8</version>
       <scope>test</scope>
     </dependency>
