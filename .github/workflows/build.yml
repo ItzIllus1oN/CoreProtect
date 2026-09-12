@@ -27,9 +27,16 @@ jobs:
       - name: Build
         run: mvn -B verify
 
+      - name: Find JAR
+        run: |
+          echo "Searching for built JAR files..."
+          find . -type f -name "*.jar" -print
+
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: CoreProtect-JAR
-          path: target/builds/*.jar
+          path: |
+            **/target/*.jar
+            **/target/**/*.jar
           if-no-files-found: error
